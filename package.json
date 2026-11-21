@@ -1,0 +1,24 @@
+{
+  "name": "remittance-review",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Payment review and approval evidence for a fictional public hospital",
+  "scripts": {
+    "dev": "node server.mjs --dev",
+    "build": "vite build",
+    "build:worker": "vite build && node scripts/build-worker.mjs",
+    "start": "node server.mjs",
+    "test": "node --test server/*.test.mjs"
+  },
+  "dependencies": {
+    "cosmjs-types": "0.11.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "vite": "6.4.4"
+  },
+  "license": "MIT"
+}

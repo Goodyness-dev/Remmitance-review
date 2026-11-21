@@ -1,0 +1,13 @@
+**
+!Dockerfile
+!package.json
+!package-lock.json
+!index.html
+!src/
+!src/**
+!server.mjs
+!server/
+!server/desk.mjs
+!server/diana.mjs
+!server/local.mjs
+!server/records.mjs

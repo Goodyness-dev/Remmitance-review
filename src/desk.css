@@ -1,0 +1,57 @@
+:root{font-family:"Source Sans 3",system-ui,sans-serif;color:#1e342b;background:#f6f4eb;font-synthesis:none;line-height:1.5}
+*{box-sizing:border-box}
+body{margin:0}
+.mast{display:flex;justify-content:space-between;align-items:center;padding:20px max(6vw,24px);border-bottom:1px solid #d8ded0;background:#fffcf3}
+.mast div{font-size:18px;font-weight:750}
+.mast>span,.context{font-size:13px;color:#4d5f54}
+.mark{display:inline-grid;place-items:center;width:35px;height:35px;margin-right:8px;background:#244f3e;color:white;border-radius:50%;font-family:Georgia,serif}
+main{max-width:1400px;margin:auto;padding:22px max(5vw,22px) 60px}
+.context{display:flex;align-items:center;justify-content:space-between;gap:12px;letter-spacing:.08em;font-weight:700}
+.context label{display:flex;align-items:center;gap:9px;letter-spacing:normal;margin:0}
+.hero{display:grid;grid-template-columns:1fr 1.12fr;gap:34px;margin:25px 0 36px;align-items:center}
+.intro h1{font:500 clamp(2.5rem,5.9vw,5.1rem)/.98 Georgia,serif;letter-spacing:-.065em;margin:18px 0 23px;max-width:9ch}
+.intro p{max-width:41ch;color:#4d5f54;margin:10px 0 18px}
+.sum,.comparison strong,.hash,time{font-family:"IBM Plex Mono",Consolas,monospace;font-variant-numeric:tabular-nums}
+.sum{font-size:clamp(1.7rem,3vw,2.85rem);font-weight:700;letter-spacing:-.07em}
+.status{display:inline-block;background:#dcece0;color:#204732;padding:5px 12px;border-radius:999px;font-size:14px;font-weight:750}
+.hold{background:#f8e4bc;color:#6f3a16}
+.separator{padding:0 4px}
+button{background:#244f3e;border:1px solid transparent;border-radius:7px;color:#fff;font:inherit;font-weight:700;padding:9px 15px;cursor:pointer;margin:5px 8px 5px 0}
+button.secondary{background:#ffffff00;color:#244f3e;border-color:#9aaea2}
+button:disabled{opacity:.55;cursor:default}
+:focus-visible{outline:3px solid #b66b25;outline-offset:3px}
+.comparison{border:1px solid #c7d3c7;border-radius:18px;overflow:hidden;background:radial-gradient(ellipse at 50% 24%,#e2eadb,#c3d1c2)}
+.scene{height:clamp(160px,27vw,320px)}
+.scene canvas{display:block}
+.comparison-values{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 16px 16px}
+.comparison-values>div{background:#faf9f0;border-radius:9px;padding:11px 14px}
+.comparison-values>div:nth-child(2){background:#fff3da}
+.comparison-values span,.comparison-values small{display:block}
+.comparison-values strong{display:block;font-size:clamp(1.35rem,3vw,2.65rem);letter-spacing:-.06em}
+.differences{margin:0;padding:8px 16px;background:#f5e5c4;color:#673c19;font-size:14px;font-weight:750}
+.field-comparison{padding:12px;background:#faf9f0}
+.field-comparison table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:clamp(.78rem,1.25vw,.93rem)}
+.field-comparison caption{text-align:left;font-weight:750;padding-bottom:8px}
+.field-comparison th,.field-comparison td{text-align:left;vertical-align:top;border-top:1px solid #d8ded0;padding:7px;overflow-wrap:anywhere}
+.field-comparison th:first-child{width:28%}
+.field-comparison .changed{background:#fff3da}
+.field-comparison small{display:block;color:#673c19}
+.lower{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.lower section{border-top:1px solid #ccd6c9;padding-top:12px}
+h2{font:500 27px Georgia,serif;margin:8px 0 12px}
+ol{margin:0;padding:0 0 0 20px}
+li{margin-bottom:14px;padding-left:8px}
+li strong,time{display:block}
+li p{margin:2px 0;color:#4d5f54}
+time,.hash{font-size:12px;overflow-wrap:anywhere}
+label{display:block;font-weight:700;margin:10px 0}
+textarea,input,select{font:inherit;border:1px solid #a6b4a9;background:#fffdf6;color:inherit;border-radius:6px;padding:7px 9px;max-width:100%}
+textarea,input:not([type=file]){width:100%;display:block;margin-top:5px}
+[role=status]{color:#6f3a16;min-height:1.5em}
+@media(max-width:760px){.hero,.lower{grid-template-columns:1fr;gap:18px}.mast{padding:13px 16px}.mast>span{text-align:right}.context{flex-wrap:wrap}.intro h1{max-width:none}.scene{height:185px}}
+@media(max-width:420px){.mast div{font-size:15px}.mast>span{font-size:11px}.comparison-values{padding-inline:8px;gap:7px}.comparison-values>div{padding-inline:9px}}
+@media(max-width:760px){
+  .comparison{display:flex;flex-direction:column}
+  .comparison-values{order:-2;padding-top:12px}
+  .differences{order:-1}
+}

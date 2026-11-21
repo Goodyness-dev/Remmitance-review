@@ -1,0 +1,4 @@
+CREATE TABLE desks (
+  id TEXT PRIMARY KEY,
+  state TEXT NOT NULL
+);
