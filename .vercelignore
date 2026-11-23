@@ -1,0 +1,11 @@
+.env
+.env.*
+.local/
+.openai/
+.chrome-preview/
+.npm-cache/
+.git/
+node_modules/
+dist/
+*.sqlite*
+*.webm

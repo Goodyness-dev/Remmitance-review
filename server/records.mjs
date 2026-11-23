@@ -34,6 +34,12 @@ export async function sha256(value) {
   return hex(new Uint8Array(digest));
 }
 
+export async function destinationCommitment({ project, bank, account, salt }) {
+  return '0x' + await sha256(JSON.stringify([
+    'remittance-review/destination/v1', project.toLowerCase(), bank, account, salt.toLowerCase(),
+  ]));
+}
+
 export async function approvalEvidence({ instruction, version, previous, reason, requester, confirmation, approver }, salt = hex(crypto.getRandomValues(new Uint8Array(32)))) {
   const record = [
     'remittance-review/approval/v1', 'fictional-teaching-hospital', 'qorechain-diana',

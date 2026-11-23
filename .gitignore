@@ -1,7 +1,14 @@
 node_modules/
 dist/
 .env
+.env.*
+!.env.example
 .npm-cache/
 .chrome-preview/
+.vercel/
 worker/assets.generated.mjs
 *.sqlite*
+cache/
+out/
+diana-market-road.json
+.local/

@@ -1,0 +1,35 @@
+.project-app { min-height: 100vh; background: #f4f2e9; color: #142822; }
+.project-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px max(20px, calc((100% - 1120px) / 2)); background: #17352e; color: #f9f6ec; }
+.project-header a { color: inherit; text-underline-offset: 4px; }
+.project-body { width: min(1120px, calc(100% - 40px)); margin-inline: auto; padding: 40px 0 56px; }
+.project-body h1 { font-size: clamp(2.3rem, 5vw, 4.25rem); line-height: 1.05; margin: 8px 0; }
+.project-eyebrow, .project-milestones small { color: #466458; font-size: .78rem; font-weight: 700; letter-spacing: .055em; }
+.project-subtitle { color: #405b50; }
+.project-milestones { margin: 28px 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.project-milestones li { display: grid; gap: 8px; padding: 16px; border-top: 3px solid #8aa497; background: #e8ede4; }
+.project-milestones li[aria-current] { background: #fcf0d9; border-color: #a66b19; }
+.project-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.project-card { background: #fffdf6; border: 1px solid #c9d2c6; border-radius: 10px; padding: clamp(16px, 4vw, 28px); }
+.project-card h2 { margin: 8px 0; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.12; }
+.project-amount { font: 700 clamp(1.65rem, 4vw, 3rem) monospace; }
+.project-accounts { display: grid; gap: 8px; grid-template-columns: 1fr 1fr; }
+.project-accounts div { background: #eef1e8; padding: 12px; }
+.project-accounts dd { margin: 4px 0 0; font: 700 1.35rem monospace; }
+.project-card button { margin: 6px 8px 6px 0; }
+.project-card .project-secondary { color: #254b3e; background: #e9efe6; border: 1px solid #859e90; }
+.project-history { padding-left: 1.3em; }
+.project-history li { padding: 6px 0; }
+.project-chain { margin-top: 18px; }
+.project-contract { overflow-wrap: anywhere; font-family: monospace; }
+.project-payout { display: grid; gap: 10px; max-width: 38rem; }
+.project-payout label { display: grid; gap: 4px; }
+.project-payout button { justify-self: start; }
+.project-payout dt { font-weight: 700; }
+.project-payout dd { margin-left: 0; margin-bottom: 6px; }
+.project-approval { margin-block: 16px; }
+.project-approval summary { cursor: pointer; font-weight: 700; }
+
+@media (max-width: 700px) {
+  .project-milestones, .project-grid { grid-template-columns: 1fr; }
+  .project-body { padding-top: 24px; }
+}
